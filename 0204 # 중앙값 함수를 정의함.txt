@@ -1,0 +1,20 @@
+# 중앙값 함수를 정의함
+# 오름차순 정렬
+# 함수의 인덱스 길이를 정의 (len함수 활용)
+
+
+# if 홀수면
+#  리스트 길이값 / 2 값을 구함
+# else 짝수면
+#  리스트 길이값 / 2 , 길이값 / 2 에서 -1 위치 값의 합 /2
+
+def min_score(num):
+    num.sort()
+    n = len(num)
+
+    if n % 2 == 1:
+        return num(n // 2)
+
+    else :
+        mid1, mid2 = num[n // 2 - 1], num[n // 2]
+        return (mid1 + mid2)
